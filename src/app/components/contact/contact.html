@@ -1,0 +1,10 @@
+<section class="app-page">
+  <article class="app-page__card">
+    <h2 class="app-page__title" [class.blue]="isBlue">Contact</h2>
+    <p class="app-page__text" [style.color]="isBlue ? 'var(--primary-color)' : 'green'">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </article>
+  <button class="app-page__button" (click)="toggleColor()">Change color</button>
+</section>

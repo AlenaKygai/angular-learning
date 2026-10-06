@@ -1,0 +1,25 @@
+<div class="app-slider">
+  <div class="app-slider__container">
+    <button
+      type="button"
+      class="app-slider__button app-slider__button--prev"
+      (click)="prevSlide()"
+      aria-label="Previous slide"
+    >
+      <img class="app-slider__icon" src="/assets/icons/slider/icons-back-to.png" alt="" />
+    </button>
+    <img
+      [src]="slides[currentIndex]"
+      [alt]="'Slide ' + (currentIndex + 1)"
+      class="app-slider__image"
+    />
+    <button
+      type="button"
+      class="app-slider__button app-slider__button--next"
+      (click)="nextSlide()"
+      aria-label="Next slide"
+    >
+      <img class="app-slider__icon" src="/assets/icons/slider/icons-next-page.png" alt="" />
+    </button>
+  </div>
+</div>

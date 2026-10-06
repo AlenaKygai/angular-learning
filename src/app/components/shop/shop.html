@@ -1,0 +1,18 @@
+<div class="shop-page">
+  <h2>
+    Our new website section offers expanded features, allowing you to conveniently purchase goods
+    online
+  </h2>
+
+  <!-- Меню для переходу між підрозділами -->
+  <nav class="shop-nav">
+    <!-- Зверніть увагу: шлях вказується відносно /shop -->
+    <a routerLink="clothes">Shop Clothing</a> |
+    <a routerLink="kids-products">Shop Kid`s products</a>
+  </nav>
+
+  <hr />
+
+  <!-- Сюди Angular завантажить модуль clothes або kids-products -->
+  <router-outlet></router-outlet>
+</div>

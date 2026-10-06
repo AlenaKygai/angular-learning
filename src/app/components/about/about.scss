@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  flex: 1;
+}
+
+.app-page {
+  min-height: 100%;
+  padding: 2rem 1.5rem;
+  background: #f5f5f5;
+}
+
+.app-page__card {
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+}
+
+.app-page__title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.app-page__text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.app-page__button {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}

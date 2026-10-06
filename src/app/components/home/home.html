@@ -1,0 +1,29 @@
+<section class="app-home">
+  <h1 class="app-home__title">Home</h1>
+  <app-slider></app-slider>
+
+  <div>
+    <div class="app-home__form">
+      <label>Change paragraphs color</label>
+      <div *ngFor="let option of options; let i = index">
+        <div class="radio">
+          <input
+            type="radio"
+            id="{{ option.id }}"
+            name="radio"
+            [(ngModel)]="value"
+            [value]="option.id"
+          />
+          <label for="{{ option.id }}">{{ option.id }}</label>
+        </div>
+      </div>
+    </div>
+
+    <article class="app-home__card" *ngFor="let article of arrayWithHomeArticles">
+      <h2 class="app-home__title">{{ article.title | uppercase }}</h2>
+      <p class="app-home__text" *ngFor="let paragraph of article.paragraphs" [style.color]="value">
+        {{ paragraph }}
+      </p>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<section class="app-page">
+  <article class="app-page__card">
+    <h2 class="app-page__title">About</h2>
+    <p class="app-page__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.
+    </p>
+  </article>
+  <button class="app-page__button" (click)="hadlerCountVisitors()">Count visitors</button>
+  <p class="app-page__text">Count visitors: {{ countVisitors }}</p>
+  <ul>
+    <li *ngFor="let article of arrayWithArticles; index as i" (click)="lastSelectedArticle(i)">
+      <article class="app-page__card">
+        <h3 class="app-page__title">{{ article.title | titlecase }} {{ i + 1 }}</h3>
+        <p class="app-page__text">{{ article.content | lowercase }} {{ i + 1 }}</p>
+        <p>{{ currentDate | date: 'shortDate' }}</p>
+        <p>Current euro exchange rate: {{ euroRate | currency: 'EUR' : 'code' : '1.2-2' }}</p>
+      </article>
+    </li>
+  </ul>
+  <div *ngIf="selectedArticleIndex !== null">
+    <h2>Last selected article:</h2>
+    <h3 class="app-page__title">
+      {{ arrayWithArticles[selectedArticleIndex].title }} {{ selectedArticleIndex + 1 }}
+    </h3>
+    <p class="app-page__text">
+      {{ arrayWithArticles[selectedArticleIndex].content }}
+      {{ selectedArticleIndex + 1 }}
+    </p>
+  </div>
+</section>

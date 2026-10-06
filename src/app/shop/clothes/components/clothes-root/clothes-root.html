@@ -1,0 +1,29 @@
+<div class="clothes-container">
+  <!-- Меню-вкладки (Таби) -->
+  <div class="tabs-header">
+    <div class="tab-title" [class.active]="activeTab === 'womens'" (click)="setTab('womens')">
+      Жіночий одяг — сукні, джинси, кофти
+    </div>
+    <div class="tab-title" [class.active]="activeTab === 'mens'" (click)="setTab('mens')">
+      Чоловічий одяг — костюми, сорочки
+    </div>
+    <div class="tab-title" [class.active]="activeTab === 'kids'" (click)="setTab('kids')">
+      Дитячий одяг — комбінезони, куртки
+    </div>
+  </div>
+
+  <!-- Виведення компонентів залежно від вибраної вкладки -->
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'womens'" class="pane womens-pane">
+      <womenswear></womenswear>
+    </div>
+
+    <div *ngIf="activeTab === 'mens'" class="pane menswear-pane">
+      <menswear></menswear>
+    </div>
+
+    <div *ngIf="activeTab === 'kids'" class="pane kids-pane">
+      <kidswear></kidswear>
+    </div>
+  </div>
+</div>
